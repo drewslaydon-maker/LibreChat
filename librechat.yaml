@@ -1,0 +1,4 @@
+interface:
+  modelSelect: true
+  endpointsMenu: true
+  presets: true
