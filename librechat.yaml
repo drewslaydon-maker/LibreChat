@@ -1,4 +1,23 @@
-interface:
-  modelSelect: true
-  endpointsMenu: true
-  presets: true
+version: 1.3.5
+cache: true
+
+endpoints:
+  custom:
+    - name: "OpenRouter"
+      apiKey: "${OPENROUTER_KEY}"
+      baseURL: "https://openrouter.ai/api/v1"
+      models:
+        default: ["meta-llama/llama-3-70b-instruct"]
+        fetch: true
+      titleConvo: true
+      titleModel: "meta-llama/llama-3-70b-instruct"
+      dropParams: ["stop"]
+      modelDisplayLabel: "OpenRouter"
+
+  agents:
+    disableBuilder: false
+    capabilities:
+      - "execute_code"
+      - "file_search"
+      - "artifacts"
+      - "web_search"
